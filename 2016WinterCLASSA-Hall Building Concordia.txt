@@ -1,0 +1,439 @@
+///#1
+/*
+#include <stdio.h> // standard input and output
+int main ()
+
+{
+  printf("Mikail makes great peoject");
+  return 0;
+}
+*/
+
+///#2
+/*
+#include <stdio.h>
+int main()
+{
+  int var1=120;
+  int var2;
+  var2 = var1;
+  printf("%d", var2);
+  return 0;
+}
+*/
+
+///#3
+/*
+#include <stdio.h>
+int main()
+{
+  int var1, var2, var3;
+  var1 = var2 = var3 = 4;
+  printf("%d", var1);
+  return 0;
+}
+*/
+
+//printf("Mikail");
+//printf("%d", var);
+//printf("%d %d", var1, var2);
+
+///#4
+/*
+#include <stdio.h>
+
+int main()
+{
+int two=2, three=3, six=6;
+int result = ( two + three) * six / three;
+printf ("I am I am you are you are");
+printf ("here you go %d", result);
+}
+*/
+
+///#5
+/*
+#include <stdio.h>
+
+int main()
+{
+int var1=2, var2=3, var3=6;
+int result = ( var1 + var2) * var3 / var2;
+printf ("I am I am you are you are ");
+printf ("here you go %d", result);
+}
+*/
+
+///#6
+/*
+#include <stdio.h>
+int main()
+{
+  printf("%d", sizeof(int));
+  return 0;
+}
+*/
+
+///#7
+/*
+#include <stdio.h>
+int main()
+{
+  printf("%d", sizeof(long int));
+  return 0;
+}
+*/
+
+///#8
+/*
+#include <stdio.h>
+int main()
+{
+  printf("%d", sizeof(short int));
+  return 0;
+}
+*/
+
+
+///#9
+/*
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+  int var1 = INT_MIN;
+  int var2 = INT_MAX;
+
+  printf ("range of sgined integer is from %d to %d", var1, var2);
+  return 0;
+}
+*/
+
+///#10
+/*
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+unsigned int var1 = 0;
+unsigned int var2 = UINT_MAX;
+
+printf("range of the unsgined integer is from %u to %u", var1, var2);
+return 0;
+}
+*/
+
+///#11
+/*
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+unsigned int var1 = SHRT_MIN;
+unsigned int var2 = SHRT_MAX;
+
+printf("range of the short integer is from %u to %u", var1, var2);
+return 0;
+}
+*/
+
+
+///#12
+/*
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+unsigned int var1 = 0;
+unsigned int var2 = USHRT_MAX;
+
+printf("range of the short integer is from %u to %u", var1, var2);
+return 0;
+}
+*/
+
+
+///#13
+/*
+#include <stdio.h>
+int main ()
+{
+  int var1= -2147483649, var2= -2147483630;
+  printf("%d %d", var1, var2);
+}
+ */
+
+
+///#14
+/*
+#include <stdio.h>
+int main()
+{
+  char var= 127;
+  printf("%c", var);
+  return 0;
+}
+*/
+
+///#15
+/*
+#include<stdio.h>
+int main()
+{
+float var1 = 3.141592535897932;
+double var2 = 3.141592535897932;
+long double var3 = 3.14159253589793213456;
+printf("%d\n", sizeof(float));
+printf("%d\n", sizeof(double));
+printf("%d\n", sizeof(long double));
+printf("%.16f\n", var1);
+printf("%.16f\n", var2);
+printf("%.21Lf\n", var3);
+}
+*/
+
+///#16
+/*
+#include<stdio.h>
+int main()
+{
+int var=4/9;
+printf("%d\n", var);
+
+float var1=4/9;
+printf("%.2f\n", var1);
+
+float var2=4.0/9.0;
+printf("%.2f\n", var2);
+}
+*/
+
+
+///#17
+/*
+#include<stdio.h>
+#include <string.h>
+
+int main()
+{
+char word[1000];  // Define a char array to store the input word
+int length;
+printf("Enter a word");
+scanf("%s", word);
+length = strlen(word);
+printf("the word '%s' has %d characters.\n", word, length);
+return 0;
+}
+*/
+
+///#18
+/*
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+char sentence[1000];
+int length;
+printf("Enter a sentence: ");
+fgets(sentence, sizeof(sentence), stdin);
+length = strlen(sentence)-1;
+printf("The sentence has %d characters.\n", length);
+return 0;
+}
+*/
+
+///#19
+/*
+#include <stdio.h>
+
+int* twoSum(int* nums, int numsSize, int target, int* returnSize){
+    static int result[2]; // Array to hold the result indices
+    for (int i = 0; i < numsSize; i++) {
+        for (int j = i + 1; j < numsSize; j++) {
+            if (nums[i] + nums[j] == target) {
+                result[0] = i;
+                result[1] = j;
+                *returnSize = 2;
+                return result; // Return the array of indices
+            }
+        }
+    }
+    *returnSize = 0; // Return size 0 if no solution found
+    return NULL;
+}
+*/
+
+///#20
+/*
+int main() {
+    int nums[] = {2, 7, 11, 15};
+    int target = 9;
+    int returnSize;
+    
+    int* result = twoSum(nums, 4, target, &returnSize);
+    
+    if (result != NULL) {
+        printf("Indices: [%d, %d]\n", result[0], result[1]);
+    } else {
+        printf("No solution found.\n");
+    }
+    
+    return 0;
+}
+*/
+
+///#21
+/*
+#include <stdio.h>
+void generateBraces(int open, int close, char *str, int pos, int n)
+{
+  if (pos ==2*n)
+  {
+    srt [pos] ='\0';
+    printf("%s\n", str);
+    return;
+  }
+  if (open<n){
+    str[pos] = '{';
+    generateBrace(open +1, close, srt, pos +1,n);  
+  }
+  if (close<open)
+{
+  str[pos] ='}';
+  
+  generatedBrace(open, close + 1, srt, pos +1,n);
+}
+}
+*/
+
+
+///#22
+/*
+//Given a sorted array of integers, return the low and high index of the given key. Return -1 if not found. The array length can be in the millions with many duplicates.
+#include <stdio.h>
+
+int findLowIndex (int arr[], int n, int key);
+int findHightIndex(int arr[], int n, int key);
+int main ()
+{
+  int arr[]={1,2,2,2,3,4,5,5,5,6,7};
+  int n = sizeof(arr)  sizeof(arr[0]);
+  int key;
+
+  printf("Enter the key: ");
+  scanf("%d", &key);
+   int lowIndex = findLowIndex(arr, n, key);
+   int highIndex = findHighIndex(arr, n ,key);
+   if( lowIndex ==-1);
+   {
+    printf("key %d not found in the array /n", key);
+   } else{
+    printf("Low index: %d, Hight index %d\n", lowIndex, highindex);
+   }
+   retun 0;
+}
+int findLowIndex(int arr[], int n, int key)
+{
+  int low = 0, hight = n-1, result =-1;
+while (low<=high){
+  int mid=low+(high-low)/2;
+  if(arr[mid] ==key){
+    result = mid;
+    high=mid-1
+  } else if (arr[mid] <key) {
+    low=mid+1;
+  }
+  else {
+  high=mid-1;
+  }
+}
+return result;
+}
+int findHighIndex(int arr[], int n, int key) {
+  int low=0, high=n-1, result=-1;
+  while(low<=high){
+    int mid=low+)high-low)/2;
+    if(arr[mid]==key){
+      result=mid;
+      low=mid+1;
+    } else if (arr[mid]<key){
+      low=mid+1;
+    }else{
+      high=mid-1;
+    }
+  }
+  return result;
+}
+*/
+
+
+
+
+///#23
+/*
+You are tasked with writing a C program to monitor and control the power distribution of a low voltage power system. The system has four subsystems (e.g., sensors, controllers, actuators) that can be either powered ON or OFF based on specific conditions.
+
+Each subsystem is controlled by a digital GPIO pin.
+Subsystem 1 turns ON if the battery voltage is above 12V.
+Subsystem 2 turns ON if the current is above 2A.
+Subsystem 3 turns ON if both voltage is above 12V and temperature is below 40°C.
+Subsystem 4 turns OFF if the temperature exceeds 60°C.
+You need to:
+
+Write a C function that takes the current voltage, current, and temperature as inputs and controls the ON/OFF states of the subsystems.
+Assume each GPIO pin is represented by an array gpio_pins[] where gpio_pins[i] is 1 when the subsystem is ON and 0 when OFF.
+Print the state of each subsystem.
+Example Output:
+yaml
+Copy code
+Voltage: 13.5V, Current: 2.5A, Temperature: 35°C
+Subsystem 1: ON
+Subsystem 2: ON
+Subsystem 3: ON
+Subsystem 4: ON
+Your Task:
+Write a C program that implements this functionality. Assume the GPIO pins can be controlled using a simple integer array where setting 1 means ON and 0 means OFF.
+*/
+
+/*
+#include <stdio.h>
+void controlsubsystems(float voltage, float current, float tempreture, int gpio_pins[]);
+int main()
+{
+  float voltage=13.5;
+  float current=2.5;
+  float temperature=35.0;
+  int gpio_pin[4]={0,0,0,0};
+  controlSubsystem (voltage, current, temperature, gpio_pins);
+  printf("voltage: %.1fV, current: %.1fA, tempreture: %.1fC\n", voltage, current, temperature);
+for(int i=0; i<4; i++) {
+  printf("Subsystem %d: %s\n", i+1, gpio_pin[i]? "ON" : "OFF");
+}
+return 0;
+
+}
+
+void controlSubsystems(float voltage, float current, float temperature, int gpio_pins[]){
+  if (voltage> 12.0) {
+    gpio_pins[0]=1;
+  }
+  if (current>2.0){
+    gpio_pins[1]=1;
+  }
+  if (voltage> 12.0 && temperature < 40.0) {
+    gpio_pins[2]=1;
+  }
+    if (temperature > 60.0){
+      gpio_pins[3]=0;
+    }
+    else {
+      gpio_pins[3]=1;
+    }
+  }
+  */
+
+
